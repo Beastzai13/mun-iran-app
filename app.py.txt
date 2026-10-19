@@ -1,0 +1,55 @@
+import streamlit as st
+import json
+
+st.set_page_config(page_title="Iran MUN Answer Engine", page_icon="🇮🇷", layout="wide")
+
+st.title("🇮🇷 Islamic Republic of Iran — Committee Answer Finder")
+st.caption("Type any keyword to instantly generate Iran's official stance, exact defense, and verified citation.")
+
+# Load database safely
+@st.cache_data
+def load_db():
+    try:
+        with open("iran_db.json", "r", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return []
+
+db = load_db()
+
+if not db:
+    st.error("⚠️ 'iran_db.json' file is missing or empty! Please make sure it is in the same folder.")
+else:
+    # Universal search bar
+    query = st.text_input("⚡ Enter a keyword or question (e.g., 'surveillance', 'sanctions', 'refugees'):", "")
+
+    if query:
+        query_words = query.lower().split()
+        matches = []
+
+        for item in db:
+            combined_text = " ".join(item["keywords"]) + " " + item["topic"].lower() + " " + item["direct_answer"].lower()
+            if any(word in combined_text for word in query_words):
+                matches.append(item)
+
+        if matches:
+            st.success(f"Found {len(matches)} matching positions for Iran:")
+            for res in matches:
+                st.subheader(f"📌 Agenda Topic: {res['topic']}")
+                
+                st.markdown("### 💬 Direct Prepared Answer:")
+                st.write(res["direct_answer"])
+                
+                st.warning(f"🗣️ **Speech Phrase for Committee:** *\"{res['debate_phrase']}\"*")
+                
+                col1, col2 = st.columns(2)
+                with col1:
+                    st.info(f"📄 **Source Document:** {res['official_doc']}")
+                with col2:
+                    st.markdown(f"🔗 **Official Citation Link:** [{res['official_link']}]({res['official_link']})")
+                
+                st.divider()
+        else:
+            st.warning("No matching information found in your database.")
+    else:
+        st.info("Start typing a keyword above to look up Iran's official positions instantly.")
