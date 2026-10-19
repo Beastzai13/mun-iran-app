@@ -1,50 +1,84 @@
-[
-  {
-    "keywords": ["surveillance", "digital privacy", "internet", "iccpr", "monitoring", "blackout", "proportionality"],
-    "topic": "Mass Surveillance & Internet Governance",
-    "direct_answer": "Iran maintains that state oversight of digital networks is a critical component of national cyber sovereignty to protect public order and national infrastructure against foreign cyber threats. Under Article 19(3) of the ICCPR, sovereign states have a recognized right to restrict telecommunications for public safety and national security.",
-    "debate_phrase": "The Delegation of Iran reminds this Council that digital privacy and national security must be balanced. We reject Western interference in our domestic telecommunication laws.",
-    "official_doc": "UN Human Rights Office (OHCHR) - Iran Country Profile",
-    "official_link": "https://www.ohchr.org/en/countries/iran"
-  },
-  {
-    "keywords": ["sanctions", "sovereignty", "unhrc", "mandates", "intervention", "double standards"],
-    "topic": "UNHRC Mandates & Unilateral Coercive Measures",
-    "direct_answer": "Iran firmly opposes country-specific mandates and unilateral sanctions, citing Article 2(7) of the UN Charter (non-interference in domestic affairs). Iran advocates for universal, equal dialogue like the Universal Periodic Review (UPR) rather than politicized Western pressure.",
-    "debate_phrase": "We reject selective criticism and double standards that weaponize human rights to bypass national sovereignty.",
-    "official_doc": "OHCHR Charter Body Database & General Assembly Statements",
-    "official_link": "https://www.ohchr.org/en/hr-bodies/hrc/home"
-  },
-  {
-    "keywords": ["refugees", "afghanistan", "unhcr", "displaced", "asylum", "burden-sharing"],
-    "topic": "Afghan Refugee Support & International Assistance",
-    "direct_answer": "Iran hosts over 3.4 million Afghan refugees and displaced persons, granting access to public healthcare and education. However, economic sanctions impose severe strain on domestic resources, requiring greater unconditional international burden-sharing under UNHCR principles.",
-    "debate_phrase": "Iran has carried a massive humanitarian responsibility for decades. The international community must provide support rather than economic obstacles.",
-    "official_doc": "UNHCR Data Portal - Islamic Republic of Iran Operational Data",
-    "official_link": "https://data.unhcr.org/en/country/irn"
-  },
-  {
-    "keywords": ["facial recognition", "morality", "hijab", "dress code", "women", "public safety"],
-    "topic": "Facial Recognition & Municipal Identity Systems",
-    "direct_answer": "Public order, municipal traffic monitoring, and civil identity verification systems are standard sovereign tools used globally to maintain municipal safety. Claims regarding their application are politically motivated distortions of domestic legal standards.",
-    "debate_phrase": "Standard municipal security systems are utilized by all nations to protect public order. We reject the weaponization of domestic administration by external actors.",
-    "official_doc": "OHCHR Digital Space & Human Rights Portal",
-    "official_link": "https://www.ohchr.org/en/digital-space-and-human-rights"
-  },
-  {
-    "keywords": ["national information network", "nin", "intranet", "isolation", "platforms"],
-    "topic": "National Information Network (NIN) & Digital Isolation",
-    "direct_answer": "Iran develops domestic digital infrastructure (NIN) to ensure cyber self-reliance, continuity of banking and government services, and protection against foreign cyber warfare. Reliance entirely on foreign platforms exposes sovereign infrastructure to foreign data harvesting and sabotage.",
-    "debate_phrase": "Digital self-reliance is a pillar of national security. Protecting our local digital economy from foreign cyber threats is a sovereign obligation.",
-    "official_doc": "UN Human Rights Office Special Procedures & Reports",
-    "official_link": "https://www.ohchr.org/en/countries/iran"
-  },
-  {
-    "keywords": ["special rapporteur", "fact-finding mission", "ffm", "entry", "cooperation", "mandates"],
-    "topic": "Refusal of Country-Specific Rapporteurs",
-    "direct_answer": "Iran rejects country-specific mechanisms because they are selective political tools created by Western powers to single out targeted states. True human rights evaluation must occur through universal, non-politicized frameworks like the Universal Periodic Review.",
-    "debate_phrase": "We reject selective mandates designed for political pressure rather than genuine human rights dialogue.",
-    "official_doc": "Independent International Fact-Finding Mission on Iran - OHCHR",
-    "official_link": "https://www.ohchr.org/en/hr-bodies/hrc/ffm-iran/index"
-  }
-]
+{
+  "topics": [
+    {
+      "keyword": "blackout",
+      "topic": "Internet Blackouts & National Security Disruption",
+      "answer": "Iran maintains that temporary, targeted network disconnections and sovereign traffic management are essential legal measures to prevent foreign-backed incitement, protect critical infrastructure, and preserve national public order during acute civil unrest, operating under national security exceptions.",
+      "speech": "The Delegation of Iran emphasizes that safeguarding national stability against foreign-instigated cyber warfare and violent subversion supersedes unmitigated commercial connectivity during national emergencies.",
+      "source": "UN Human Rights Council - Reports on Digital Space Restrictions & National Security",
+      "link": "https://digitallibrary.un.org/record/3928681"
+    },
+    {
+      "keyword": "shutdown",
+      "topic": "Internet Blackouts & National Security Disruption",
+      "answer": "Iran maintains that temporary, targeted network disconnections and sovereign traffic management are essential legal measures to prevent foreign-backed incitement, protect critical infrastructure, and preserve national public order during acute civil unrest, operating under national security exceptions.",
+      "speech": "The Delegation of Iran emphasizes that safeguarding national stability against foreign-instigated cyber warfare and violent subversion supersedes unmitigated commercial connectivity during national emergencies.",
+      "source": "UN Human Rights Council - Reports on Digital Space Restrictions & National Security",
+      "link": "https://digitallibrary.un.org/record/3928681"
+    },
+    {
+      "keyword": "surveillance",
+      "topic": "Mass Surveillance & Internet Governance",
+      "answer": "Iran maintains that state oversight of digital networks is a critical component of national cyber sovereignty to protect public order and national infrastructure against foreign cyber threats. Under Article 19(3) of the ICCPR, sovereign states have a recognized right to restrict telecommunications for public safety and national security.",
+      "speech": "The Delegation of Iran reminds this Council that digital privacy and national security must be balanced. We reject Western interference in our domestic telecommunication laws.",
+      "source": "UN Human Rights Committee - Fourth Periodic Report of Iran",
+      "link": "https://www.ohchr.org/en/documents/concluding-observations/ccprcirnco4-concluding-observations-fourth-periodic-report"
+    },
+    {
+      "keyword": "privacy",
+      "topic": "Mass Surveillance & Internet Governance",
+      "answer": "Iran maintains that state oversight of digital networks is a critical component of national cyber sovereignty to protect public order and national infrastructure against foreign cyber threats. Under Article 19(3) of the ICCPR, sovereign states have a recognized right to restrict telecommunications for public safety and national security.",
+      "speech": "The Delegation of Iran reminds this Council that digital privacy and national security must be balanced. We reject Western interference in our domestic telecommunication laws.",
+      "source": "UN Human Rights Committee - Fourth Periodic Report of Iran",
+      "link": "https://www.ohchr.org/en/documents/concluding-observations/ccprcirnco4-concluding-observations-fourth-periodic-report"
+    },
+    {
+      "keyword": "mandate",
+      "topic": "UNHRC Mandates & Unilateral Coercive Measures",
+      "answer": "Iran firmly opposes country-specific mandates and unilateral sanctions, citing Article 2(7) of the UN Charter (non-interference in domestic affairs). Iran advocates for universal, equal dialogue like the Universal Periodic Review (UPR) rather than politicized Western pressure.",
+      "speech": "We categorically reject country-specific mandates as tools of political coercion. True human rights cooperation must respect state sovereignty under the UN Charter.",
+      "source": "UN Human Rights Office - Treaty Body Database",
+      "link": "https://www.ohchr.org/en/documents/concluding-observations/ccprcirnco4-concluding-observations-fourth-periodic-report"
+    },
+    {
+      "keyword": "sanctions",
+      "topic": "UNHRC Mandates & Unilateral Coercive Measures",
+      "answer": "Iran firmly opposes country-specific mandates and unilateral sanctions, citing Article 2(7) of the UN Charter (non-interference in domestic affairs). Iran advocates for universal, equal dialogue like the Universal Periodic Review (UPR) rather than politicized Western pressure.",
+      "speech": "We categorically reject country-specific mandates as tools of political coercion. True human rights cooperation must respect state sovereignty under the UN Charter.",
+      "source": "UN Human Rights Office - Treaty Body Database",
+      "link": "https://www.ohchr.org/en/documents/concluding-observations/ccprcirnco4-concluding-observations-fourth-periodic-report"
+    },
+    {
+      "keyword": "nin",
+      "topic": "National Information Network (NIN) & Digital Self-Reliance",
+      "answer": "The National Information Network (NIN) provides a secure, domestic digital infrastructure that ensures Iran's cyber independence, protects citizens' data from foreign espionage, and prevents foreign-backed digital destabilization.",
+      "speech": "Our National Information Network ensures digital self-reliance and protects our citizens from foreign cyber intervention and unauthorized data harvesting.",
+      "source": "UN General Assembly - Human Rights Council Reports on Iran",
+      "link": "https://digitallibrary.un.org/record/3928681"
+    },
+    {
+      "keyword": "sovereignty",
+      "topic": "National Information Network (NIN) & Digital Self-Reliance",
+      "answer": "The National Information Network (NIN) provides a secure, domestic digital infrastructure that ensures Iran's cyber independence, protects citizens' data from foreign espionage, and prevents foreign-backed digital destabilization.",
+      "speech": "Our National Information Network ensures digital self-reliance and protects our citizens from foreign cyber intervention and unauthorized data harvesting.",
+      "source": "UN General Assembly - Human Rights Council Reports on Iran",
+      "link": "https://digitallibrary.un.org/record/3928681"
+    },
+    {
+      "keyword": "refugee",
+      "topic": "Afghan Refugee Hosting & Regional Burden-Sharing",
+      "answer": "Despite severe economic hardships and unilateral Western sanctions, Iran hosts millions of displaced Afghan refugees, providing them with education, healthcare, and infrastructure access with minimal international burden-sharing from Western states.",
+      "speech": "Iran bears an immense humanitarian responsibility hosting millions of displaced neighbors, receiving negligible support from Western nations who lecture us on human rights.",
+      "source": "UNHCR Iran Operational Updates & Country Profiles",
+      "link": "https://www.ohchr.org/en/countries/iran"
+    },
+    {
+      "keyword": "afghan",
+      "topic": "Afghan Refugee Hosting & Regional Burden-Sharing",
+      "answer": "Despite severe economic hardships and unilateral Western sanctions, Iran hosts millions of displaced Afghan refugees, providing them with education, healthcare, and infrastructure access with minimal international burden-sharing from Western states.",
+      "speech": "Iran bears an immense humanitarian responsibility hosting millions of displaced neighbors, receiving negligible support from Western nations who lecture us on human rights.",
+      "source": "UNHCR Iran Operational Updates & Country Profiles",
+      "link": "https://www.ohchr.org/en/countries/iran"
+    }
+  ]
+}
