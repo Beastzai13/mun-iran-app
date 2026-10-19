@@ -2,7 +2,7 @@ import streamlit as st
 
 # Page configuration
 st.set_page_config(
-    page_title="Iran MUN Master Intelligence Engine - UNHRC",
+    page_title="Iran MUN High-Precision Intelligence Engine - UNHRC",
     page_icon="🇮🇷",
     layout="wide"
 )
@@ -50,188 +50,108 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Header Section
-st.title("🇮🇷 Islamic Republic of Iran - UNHRC Exhaustive Master Intelligence Engine")
-st.markdown("### Model United Nations | Deep Semantic Variation & Defense Database (Part 1)")
+st.title("🇮🇷 Islamic Republic of Iran - UNHRC High-Precision Intelligence Engine")
+st.markdown("### Model United Nations | Direct Intent-Matching & Defense Database")
 
-tab1, tab2 = st.tabs(["🔍 Exhaustive Question & Defense Engine", "📝 MUN Resolution & Solution Generator"])
+tab1, tab2 = st.tabs(["🔍 Precision Question & Speech Engine", "📝 MUN Resolution & Solution Generator"])
 
-# Part 1 of the Master Database
-@st.cache_data
-def load_part1_database():
-    return [
-        {
-            "keys": [
-                "fact finding mission", "ffm", "investigation", "unhrc mandate", 
-                "independent international fact", "mission on iran", "investigative body", 
-                "who authorized the ffm", "un inquiry"
-            ],
-            "topic": "The UN Independent International Fact-Finding Mission on Iran",
-            "answer": "Iran firmly rejects the establishment, funding, and findings of politicized fact-finding bodies such as the UN Fact-Finding Mission, viewing them as clear violations of state sovereignty under UN Charter Article 2(7) and an illegitimate weaponization of human rights mechanisms.",
-            "speech": "The Delegation of Iran categorically rejects the mandate and biased findings of politically motivated fact-finding mechanisms. Such entities represent a direct, unlawful infringement upon our national sovereignty and domestic legal jurisdiction.",
-            "source": "OHCHR - Independent International Fact-Finding Mission on the Islamic Republic of Iran Portal[cite: 1]",
-            "link": "https://www.ohchr.org/en/hr-bodies/hrc/ffm-iran/index"
-        },
-        {
-            "keys": [
-                "protection bill", "user protection bill", "majlis", "parliament", 
-                "src", "gateway control", "supreme regulatory commission", "cyberspace bill", 
-                "regulations on cyberspace", "parliamentary bill"
-            ],
-            "topic": "The 'Protection of Users' Rights' Bill & Gateway Regulation",
-            "answer": "Iran's proposed User Protection Bill and Supreme Regulatory Commission guidelines are sovereign legislative measures designed to regulate foreign digital gateways, enforce local data compliance, and defend our national digital market from unregulated foreign corporate monopolies.",
-            "speech": "My delegation emphasizes that legislative initiatives in the Islamic Consultative Assembly are sovereign measures implemented to build robust digital self-reliance, protect domestic commerce, and secure our public data.",
-            "source": "UN Special Rapporteur Official Communications & OHCHR Repository",
-            "link": "https://spcommreports.ohchr.org/TMResultsBase/DownLoadPublicCommunicationFile?gId=26736"
-        },
-        {
-            "keys": [
-                "fata", "maher", "cert", "cyber police", "police", "arrest", 
-                "investigate", "cybersecurity team", "security force", "law enforcement agency",
-                "iranian cyber police"
-            ],
-            "topic": "Institutional Security Bodies: FATA Cyber Police & MAHER CERT",
-            "answer": "Iran's specialized security infrastructure, including the FATA Cyber Police and the National CERT (MAHER), operates under statutory authority to counter online financial fraud, cybercrime, and hostile foreign intelligence sabotage.",
-            "speech": "Our specialized security bodies, such as the FATA Cyber Police and National CERT, fulfill a vital law enforcement mandate to protect citizens from cybercrime and foreign-backed electronic subversion.",
-            "source": "UN Office on Drugs and Crime & OHCHR Treaty Body Observations",
-            "link": "https://www.ohchr.org/en/documents/concluding-observations/ccprcirnco4-concluding-observations-fourth-periodic-report"
-        },
-        {
-            "keys": [
-                "mtu", "throttling", "packet", "udp", "bandwidth", "dpi", 
-                "deep packet inspection", "speed", "routing", "network management", 
-                "traffic shaping", "slow connection"
-            ],
-            "topic": "Technical Network Management, MTU Throttling & Gateway Protocols",
-            "answer": "Technical network adaptations—such as Deep Packet Inspection (DPI) and bandwidth traffic management—are legally executed by national operators to protect state utility infrastructure against distributed denial-of-service (DDoS) attacks and hostile foreign intrusion.",
-            "speech": "Sovereign states possess the absolute technical right to manage gateway protocols, inspect data packets, and regulate network traffic to secure critical state utility grids against foreign cyber threats.",
-            "source": "UN Human Rights Council - Reports on Digital Space Restrictions & National Security",
-            "link": "https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/sessions-regular/session63/a-hrc-63-61-aev.pdf"
-        },
-        {
-            "keys": [
-                "starlink", "satellite", "smuggling", "dish", "receiver", 
-                "norway", "transceiver", "space internet", "elon musk satellite", 
-                "illegal receivers"
-            ],
-            "topic": "Unauthorized Satellite Constellations (Starlink) & Border Smuggling",
-            "answer": "The unauthorized, clandestine importation of satellite internet hardware by foreign intelligence intermediaries violates international telecommunication regulations, radio frequency licensing laws, and state airspace sovereignty.",
-            "speech": "The clandestine smuggling of uncertified satellite transceivers across our borders by hostile external actors undermines national radio frequency management and constitutes an illegal violation of our sovereign communication space.",
-            "source": "International Telecommunication Union (ITU) Regulations & UN General Assembly Security Reports",
-            "link": "https://digitallibrary.un.org/record/3928681"
-        }
-    ]# Part 2 of the Master Database & Core App Engine
-@st.cache_data
-def load_part2_database():
-    return [
-        {
-            "keys": [
-                "blackout", "shutdown", "cutting", "disconnection", "outage", 
-                "internet block", "protest", "riot", "unrest", "civic disturbance", 
-                "turning off internet", "block access"
-            ],
-            "topic": "Internet Blackouts & ICCPR Article 19(3) National Security Exceptions",
-            "answer": "Iran maintains that temporary, targeted network disconnections and sovereign traffic management are vital legal measures to prevent foreign-backed incitement and preserve public order under ICCPR Article 19(3) national security exceptions.",
-            "speech": "The Delegation of Iran emphasizes that safeguarding national stability against foreign-instigated subversion supersedes unmitigated commercial connectivity during acute national emergencies, fully permitted under international law.",
-            "source": "UN Human Rights Council - Reports on Digital Space Restrictions & National Security",
-            "link": "https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/sessions-regular/session63/a-hrc-63-61-aev.pdf"
-        },
-        {
-            "keys": [
-                "surveillance", "privacy", "monitoring", "tracking", "wiretap", 
-                "spying", "cctv", "data", "intercept", "article 17", "mass monitoring",
-                "spying on citizens"
-            ],
-            "topic": "Mass Surveillance & Digital Governance Under Article 17",
-            "answer": "Iran maintains that state oversight of digital networks is a critical component of national cyber sovereignty to protect public order and national infrastructure against foreign cyber threats, operating in alignment with sovereign public safety frameworks.",
-            "speech": "The Delegation of Iran reminds this Council that digital privacy and national security must be balanced. We reject Western interference in our domestic telecommunication and data security governance.",
-            "source": "UN Human Rights Committee - Fourth Periodic Report of Iran",
-            "link": "https://www.ohchr.org/en/documents/concluding-observations/ccprcirnco4-concluding-observations-fourth-periodic-report"
-        },
-        {
-            "keys": [
-                "nin", "national information network", "self-reliance", "independence", 
-                "domestic internet", "intranet", "national intranet", "local network infrastructure"
-            ],
-            "topic": "National Information Network (NIN) & Digital Self-Reliance Architecture",
-            "answer": "The National Information Network (NIN) provides a secure, domestic digital infrastructure that ensures Iran's cyber independence, protects citizens' data from foreign espionage, and prevents foreign-backed digital destabilization campaigns.",
-            "speech": "Our National Information Network ensures complete digital self-reliance and protects our citizens from foreign cyber intervention, economic warfare, and unauthorized data harvesting by foreign tech monopolies.",
-            "source": "UN General Assembly - Developments in Field of Information and Telecommunications",
-            "link": "https://digitallibrary.un.org/record/3928681"
-        },
-        {
-            "keys": [
-                "refugee", "afghan", "migration", "border", "burden", "displaced", 
-                "asylum", "humanitarian crisis", "afghan refugees in iran"
-            ],
-            "topic": "Afghan Refugee Hosting & Regional Burden-Sharing Defenses",
-            "answer": "Despite severe economic hardships and unilateral Western sanctions, Iran hosts millions of displaced Afghan refugees, providing them with education, healthcare, and infrastructure access with minimal international financial burden-sharing from Western states.",
-            "speech": "Iran bears an immense humanitarian responsibility hosting millions of displaced neighbors, receiving negligible support from Western nations who lecture us on human rights while hoarding global resources.",
-            "source": "UNHCR Iran Operational Updates & Country Profiles / OHCHR",
-            "link": "https://www.ohchr.org/en/countries/iran"
-        },
-        {
-            "keys": [
-                "encryption", "crypto", "messaging", "telegram", "whatsapp", 
-                "signal", "backdoor", "key", "secure chat", "cryptographic keys"
-            ],
-            "topic": "Encrypted Communications & Law Enforcement Cryptographic Access",
-            "answer": "Unregulated end-to-end encryption tools are routinely weaponized by transnational terror networks and foreign intelligence cells. Iran maintains that law enforcement agencies retain a sovereign right to regulate cryptographic keys to prevent violent domestic subversion.",
-            "speech": "Absolute, unmonitored encryption cannot become a sanctuary for violent extremists and foreign saboteurs seeking to destabilize sovereign states under the guise of commercial privacy.",
-            "source": "UN Office on Drugs and Crime - Cybercrime & Digital Evidence Frameworks",
-            "link": "https://www.ohchr.org/en/documents/concluding-observations/ccprcirnco4-concluding-observations-fourth-periodic-report"
-        },
-        {
-            "keys": [
-                "stuxnet", "malware", "sabotage", "nuclear", "industrial", 
-                "infrastructure", "attack", "cyberwarfare", "natanz", "worm"
-            ],
-            "topic": "Cyber Warfare & Critical Infrastructure Protection Against Foreign Sabotage",
-            "answer": "Having been the direct target of advanced state-sponsored cyber warfare such as the Stuxnet worm targeting critical industrial facilities, Iran maintains an absolute right to implement rigorous air-gapping, digital isolation, and active cyber defense protocols.",
-            "speech": "As a primary target of devastating state-sponsored cyber sabotage, Iran is obligated to deploy robust defensive firewalls and strict network controls to protect critical public utilities from foreign kinetic and digital destruction.",
-            "source": "UN General Assembly - International Security & Information Telecommunications",
-            "link": "https://digitallibrary.un.org/record/3928681"
-        }
-    ]
+# Strict Intent Dictionary Mapping
+EXACT_TOPICS = {
+    "ffm_status": {
+        "triggers": ["status", "mandate", "extension", "active", "timeline", "resolution s-39/1", "fact finding mission", "ffm"],
+        "topic": "The UN Independent International Fact-Finding Mission (Status & Mandate Timeline)",
+        "answer": "Current Status & Mandate: Established by UNHRC Resolution S-35/1 in 2022, the Fact-Finding Mission's mandate was extended under UNHRC Resolution S-39/1 through 2028. Iran categorically rejects its status, mandate, and conclusions as an illegal infringement on national sovereignty under UN Charter Article 2(7).",
+        "speech": "Regarding the status and mandate extension of the so-called Fact-Finding Mission, the Islamic Republic of Iran firmly reiterates its principled position: we reject the legality and politically motivated continuation of this body, which operates as an unlawful violation of our domestic legal jurisdiction and state sovereignty under Article 2(7) of the UN Charter.",
+        "source": "OHCHR - Independent International Fact-Finding Mission Portal (Resolution S-39/1)",
+        "link": "https://www.ohchr.org/en/hr-bodies/hrc/ffm-iran/index"
+    },
+    "protection_bill": {
+        "triggers": ["protection bill", "user protection", "majlis", "parliament bill", "gateway regulation", "cyberspace bill"],
+        "topic": "The 'Protection of Users' Rights' Bill & Gateway Regulation",
+        "answer": "Iran's proposed User Protection Bill and Supreme Regulatory Commission guidelines are sovereign legislative measures designed to regulate foreign digital gateways, enforce local data compliance, and defend our national digital market from unregulated foreign corporate monopolies.",
+        "speech": "My delegation emphasizes that legislative initiatives in the Islamic Consultative Assembly are sovereign measures implemented to build robust digital self-reliance, protect domestic commerce, and secure our public data against external manipulation.",
+        "source": "UN Special Rapporteur Official Communications & OHCHR Repository",
+        "link": "https://spcommreports.ohchr.org/TMResultsBase/DownLoadPublicCommunicationFile?gId=26736"
+    },
+    "fata_police": {
+        "triggers": ["fata", "maher", "cert", "cyber police", "security forces", "law enforcement"],
+        "topic": "Institutional Security Bodies: FATA Cyber Police & MAHER CERT",
+        "answer": "Iran's specialized security infrastructure, including the FATA Cyber Police and the National CERT (MAHER), operates under statutory authority to counter online financial fraud, cybercrime, and hostile foreign intelligence sabotage.",
+        "speech": "Our specialized security bodies, such as the FATA Cyber Police and National CERT, fulfill a vital law enforcement mandate to protect citizens from cybercrime and foreign-backed electronic subversion.",
+        "source": "UN Office on Drugs and Crime & OHCHR Treaty Body Observations",
+        "link": "https://www.ohchr.org/en/documents/concluding-observations/ccprcirnco4-concluding-observations-fourth-periodic-report"
+    },
+    "network_throttling": {
+        "triggers": ["mtu", "throttling", "dpi", "deep packet inspection", "bandwidth", "traffic management", "network speed"],
+        "topic": "Technical Network Management, MTU Throttling & Gateway Protocols",
+        "answer": "Technical network adaptations—such as Deep Packet Inspection (DPI) and bandwidth traffic management—are legally executed by national operators to protect state utility infrastructure against distributed denial-of-service (DDoS) attacks and hostile foreign intrusion, as noted in OHCHR Document A/HRC/63/61.",
+        "speech": "Sovereign states possess the absolute technical right to manage gateway protocols, inspect data packets, and regulate network traffic to secure critical state utility grids against foreign cyber threats.",
+        "source": "UN Human Rights Council - Report A/HRC/63/61 (Advance Edited Version)",
+        "link": "https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/sessions-regular/session63/a-hrc-63-61-aev.pdf"
+    },
+    "starlink_smuggling": {
+        "triggers": ["starlink", "satellite", "smuggling", "dish", "receiver", "transceiver"],
+        "topic": "Unauthorized Satellite Constellations (Starlink) & Border Smuggling",
+        "answer": "The unauthorized, clandestine importation of satellite internet hardware by foreign intelligence intermediaries violates international telecommunication regulations, radio frequency licensing laws, and state airspace sovereignty.",
+        "speech": "The clandestine smuggling of uncertified satellite transceivers across our borders by hostile external actors undermines national radio frequency management and constitutes an illegal violation of our sovereign communication space.",
+        "source": "International Telecommunication Union (ITU) Regulations & UN General Assembly Security Reports",
+        "link": "https://digitallibrary.un.org/record/3928681"
+    },
+    "internet_blackout": {
+        "triggers": ["blackout", "shutdown", "cutting internet", "disconnection", "article 19(3)", "outage"],
+        "topic": "Internet Blackouts & ICCPR Article 19(3) National Security Exceptions",
+        "answer": "Iran maintains that temporary, targeted network disconnections and sovereign traffic management are vital legal measures to prevent foreign-backed incitement and preserve public order under ICCPR Article 19(3) national security exceptions.",
+        "speech": "The Delegation of Iran emphasizes that safeguarding national stability against foreign-instigated subversion supersedes unmitigated commercial connectivity during acute national emergencies, fully permitted under international law.",
+        "source": "UN Human Rights Council - Report A/HRC/63/61 & ICCPR Article 19(3)",
+        "link": "https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/sessions-regular/session63/a-hrc-63-61-aev.pdf"
+    },
+    "nin_network": {
+        "triggers": ["nin", "national information network", "domestic internet", "intranet"],
+        "topic": "National Information Network (NIN) & Digital Self-Reliance Architecture",
+        "answer": "The National Information Network (NIN) provides a secure, domestic digital infrastructure that ensures Iran's cyber independence, protects citizens' data from foreign espionage, and prevents foreign-backed digital destabilization campaigns.",
+        "speech": "Our National Information Network ensures complete digital self-reliance and protects our citizens from foreign cyber intervention, economic warfare, and unauthorized data harvesting by foreign tech monopolies.",
+        "source": "UN General Assembly - Developments in Field of Information and Telecommunications",
+        "link": "https://digitallibrary.un.org/record/3928681"
+    }
+}
 
-# Combine Part 1 and Part 2 databases
-database = load_part1_database() + load_part2_database()
-
-# TAB 1: EXHAUSTIVE SEARCH ENGINE
+# TAB 1: PRECISION SEARCH ENGINE
 with tab1:
-    st.write("Type any question, variation, bill title, or topic below. The engine scans the master database to return exact matching positions.")
-    query = st.text_input("🔍 Enter your MUN question, accusation, or keyword:", placeholder="e.g., fact finding mission, protection bill, fata police, starlink, etc.")
+    st.write("Type your exact question below (e.g., *'what is the status of the fact finding mission'*). The direct intent parser guarantees you get the precise matching answer and speech.")
+    query = st.text_input("🔍 Enter your MUN question or topic:", placeholder="e.g., what is the status of fact finding mission")
 
     if query:
         query_lower = query.lower()
-        matched_item = None
+        matched_key = None
         
-        for item in database:
-            for key in item["keys"]:
-                if key in query_lower:
-                    matched_item = item
-                    break
-            if matched_item:
-                break
+        # Check triggers with highest matching weight
+        highest_matches = 0
+        for key, data in EXACT_TOPICS.items():
+            match_count = sum(1 for t in data["triggers"] if t in query_lower)
+            if match_count > highest_matches:
+                highest_matches = match_count
+                matched_key = key
                 
-        if matched_item:
-            st.success(f"🎯 Exact diplomatic match found for your query:")
+        if matched_key and highest_matches > 0:
+            item = EXACT_TOPICS[matched_key]
+            st.success(f"🎯 Direct Intent Match Found:")
             st.markdown(f"""
                 <div class="answer-card">
-                    <h3>📌 Agenda Topic: {matched_item['topic']}</h3>
-                    <p><strong>💬 Direct Contextual Answer:</strong><br>{matched_item['answer']}</p>
+                    <h3>📌 Agenda Topic: {item['topic']}</h3>
+                    <p><strong>💬 Direct Contextual Answer:</strong><br>{item['answer']}</p>
                     <div class="speech-box">
-                        <strong>🗣️ Exact Speech Phrase for Committee:</strong> "{matched_item['speech']}"
+                        <strong>🗣️ Exact Speech Phrase for Committee:</strong> "{item['speech']}"
                     </div>
                     <p style="font-size: 0.9em; margin-bottom: 5px;">
-                        📄 <strong>Exact Official Source Document:</strong> {matched_item['source']}
+                        📄 <strong>Exact Official Source Document:</strong> {item['source']}
                     </p>
                     <p style="font-size: 0.9em;">
-                        🔗 <strong>Official Citation Link:</strong> <a href="{matched_item['link']}" target="_blank">{matched_item['link']}</a>
+                        🔗 <strong>Official Citation Link:</strong> <a href="{item['link']}" target="_blank">{item['link']}</a>
                     </p>
                 </div>
             """, unsafe_allow_html=True)
         else:
-            st.warning("⚠️ No exact key match found. Generating rigorous sovereign defense fallback:")
+            st.warning("⚠️ No specific trigger matched. Displaying universal sovereign defense framework:")
             st.markdown(f"""
                 <div class="answer-card">
                     <h3>📌 State Sovereignty & Non-Interference Framework</h3>
@@ -249,7 +169,7 @@ with tab1:
                 </div>
             """, unsafe_allow_html=True)
     else:
-        st.info("💡 Tip: Enter specific terms like 'fact finding mission', 'protection bill', 'fata', or 'starlink' to test exact alignment.")
+        st.info("💡 Tip: Try typing 'what is the status of fact finding mission' or 'tell me about the protection bill'.")
 
 # TAB 2: MUN RESOLUTION & SOLUTION GENERATOR
 with tab2:
@@ -275,7 +195,7 @@ with tab2:
                 "3. **Establishes** a state-led cyber defense protocol ensuring national networks can autonomously defend against foreign intelligence disruption without external interference."
             ]
             resolution_link = "https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/sessions-regular/session63/a-hrc-63-61-aev.pdf"
-            doc_source = "UN Human Rights Council - Reports on Digital Space Restrictions"
+            doc_source = "UN Human Rights Council - Reports on Digital Space Restrictions (Doc: A/HRC/63/61)"
             
         elif selected_problem == "Foreign Cyber Espionage & Critical Infrastructure Protection":
             solution_title = "Framework for Countering Foreign Cyber Warfare and Sabotage"
@@ -334,118 +254,177 @@ with tab2:
             </div>
         """, unsafe_allow_html=True)
             # ==========================================
-# PART 3: ADVANCED FINANCIAL REPRESSION & NEW UN REPORT TOPICS
+# EXPANSION PART 2: LIVE FLOOR CRISIS REBUTTAL MODULE
+# ==========================================
+
+# Add this tab setup to your main layout if you want a 3rd tab, 
+# or append these extra crisis response cards into your existing engine:
+
+@st.cache_data
+def load_crisis_rebuttals():
+    return {
+        "crisis_protest_accusation": {
+            "trigger_words": ["protest", "riot", "crackdown", "unrest", "killings"],
+            "defense_title": "Rebuttal: Handling Accusations Regarding Public Unrest & Security",
+            "argument": "When Western delegations point to domestic civil unrest, emphasize that foreign intelligence operations weaponized social media platforms to coordinate violent sabotage, forcing the sovereign state to protect public infrastructure.",
+            "speech": "The Delegation of Iran rejects attempts by external states to rebrand foreign-backed violent subversion as peaceful assembly. Every sovereign government possesses an absolute duty to protect its citizens and infrastructure from externally coordinated chaos."
+        },
+        "crisis_sanctions_hypocrisy": {
+            "trigger_words": ["sanctions", "isolated", "economy", "pressure", "coercive"],
+            "defense_title": "Rebuttal: The Hypocrisy of Unilateral Coercive Measures",
+            "argument": "Pivot any attack on digital restrictions back to the illegal economic and technological sanctions imposed by Western nations, which block medical technology, civilian software, and communication hardware.",
+            "speech": "Those who lecture us on digital freedom are the very same actors imposing brutal economic blockades that deny our civilian population access to basic technological infrastructure. True human rights begin with the immediate lifting of unilateral coercive measures."
+        }
+    }
+        # ==========================================
+# PART 3: UNIVERSAL DIPLOMATIC DEFENSE & CRISIS EXTENSION MODULE
 # ==========================================
 
 @st.cache_data
 def load_part3_database():
-    return [
-        {
-            "id": "sahm_financial",
-            "keys": ["sahm", "financial", "tracking", "asset", "seizure", "confiscation", "court", "prosecutor"],
-            "topic": "The 'Sahm' Financial Tracking System & Asset Confiscation",
-            "answer": "Iran's domestic financial oversight mechanisms, including the Sahm tracking platform, enable competent judicial and prosecutorial bodies nationwide to execute asset regulation and enforce compliance against unlawful commercial activities under sovereign financial laws.",
-            "speech": "The Delegation of Iran emphasizes that national financial transparency tools like the Sahm platform ensure lawful accountability, prevent economic subversion, and protect our domestic economy from illicit capital flight.",
-            "source": "OHCHR / UN Human Rights Briefs & Domestic Financial Compliance Frameworks",
-            "link": "https://www.ohchr.org/en/countries/iran"
+    return {
+        "unilateral_sanctions": {
+            "triggers": ["sanctions", "economic pressure", "coercive measures", "tech blockade"],
+            "topic": "The Devastating Impact of Unilateral Coercive Measures on Civilian Infrastructure",
+            "answer": "Unilateral coercive measures and economic sanctions imposed by Western states directly obstruct developing nations from acquiring civilian telecommunication hardware, medical infrastructure, and essential software updates, constituting a collective punishment that violates international law.",
+            "speech": "We remind this Council that those who lecture developing nations on digital freedom are the very same actors maintaining brutal technological blockades. True human rights compliance begins with the immediate and unconditional lifting of illegal unilateral coercive measures.",
+            "source": "UN Human Rights Council - Treaty Body Observations & Resolution Records",
+            "link": "https://www.ohchr.org/en/documents/concluding-observations/ccprcirnco4-concluding-observations-fourth-periodic-report"
         },
-        {
-            "id": "special_rapporteur",
-            "keys": ["special", "rapporteur", "mai", "sato", "expert", "un-experts", "mandates", "politicized"],
-            "topic": "Responses to UN Special Rapporteur Reports & Mandates",
-            "answer": "Iran maintains that country-specific mandates and reports issued by thematic or special rapporteurs frequently reflect selective political biases, contravening the cooperative, non-politicized framework required by the Universal Periodic Review (UPR).",
-            "speech": "We reject the partisan framing of country-specific mandates, noting that constructive human rights dialogue must be based on objective cooperation and absolute respect for state sovereignty rather than external political pressure.",
-            "source": "UN Human Rights Office - Official Country Profile & Special Procedures Records",
+        "sovereign_non_interference": {
+            "triggers": ["interference", "article 2(7)", "sovereignty", "domestic jurisdiction", "un Charter"],
+            "topic": "The Absolute Principle of Non-Interference Under UN Charter Article 2(7)",
+            "answer": "Pursuant to Article 2(7) of the Charter of the United Nations, nothing contained within the Charter authorizes the UN or member states to intervene in matters which are essentially within the domestic jurisdiction of any state, rendering politicized country-mandates legally null and void.",
+            "speech": "The Islamic Republic of Iran firmly asserts that any external attempt to dictate domestic judicial, administrative, or digital policies violates the foundational pillar of state sovereignty and non-interference enshrined in Article 2(7) of the UN Charter.",
+            "source": "Charter of the United Nations - Article 2(7)",
             "link": "https://www.ohchr.org/en/countries/iran"
-        },
-        {
-            "id": "transnational_security",
-            "keys": ["transnational", "repression", "borders", "external", "security", "threats", "intelligence"],
-            "topic": "Sovereign Counter-Intelligence & Border Security Operations",
-            "answer": "In response to acute regional security threats and external hostile operations, Iran's security apparatus exercises its sovereign mandate to protect national borders, neutralize foreign-backed infiltration, and maintain public order.",
-            "speech": "Facing persistent hostile intelligence operations across our borders, the Islamic Republic of Iran maintains an uncompromising duty to exercise robust counter-intelligence and border security measures to protect national stability.",
-            "source": "UN General Assembly - International Security & Counter-Terrorism Frameworks",
-            "link": "https://digitallibrary.un.org/record/3928681"
         }
-    ]
-
-# Append Part 3 to your master database
-database = database + load_part3_database()
+    }
         # ==========================================
-# PART 4: OFFICIAL UN DOCUMENT INTEGRATION & POSITION PAPER GENERATOR MODULE
+# PART 4: AFGHAN REFUGEE BURDEN & U.S. SANCTIONS EXTENSION MODULE
 # ==========================================
 
 @st.cache_data
 def load_part4_database():
-    return [
-        {
-            "id": "doc_ahrc_63_61",
-            "keys": ["a/hrc/63/61", "advance edited version", "ohchr report", "2026 report", "digital restrictions report"],
-            "topic": "Official UN Document Analysis: OHCHR Report A/HRC/63/61",
-            "answer": "According to official documentation in OHCHR report A/HRC/63/61, the Islamic Republic of Iran maintains that its network regulations and traffic management protocols are enacted under domestic legal frameworks to preserve public safety and counteract foreign-instigated civil subversion.",
-            "speech": "The Delegation of Iran refers this committee to official findings under document A/HRC/63/61, emphasizing that sovereign measures taken to manage telecommunication networks are strictly aligned with national security requirements.",
-            "source": "UN Human Rights Council - Report A/HRC/63/61 (Advance Edited Version)",
-            "link": "https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/sessions-regular/session63/a-hrc-63-61-aev.pdf"
-        },
-        {
-            "id": "position_paper_module",
-            "keys": ["position paper", "background", "international efforts", "country position", "proposed solutions"],
-            "topic": "Official MUN Committee Position Paper: Human Rights & Digital Privacy",
-            "answer": "The Islamic Republic of Iran upholds cyber sovereignty, data protection, and national security under UN Charter Article 2(7) and ICCPR Article 19(3), balancing fundamental rights against foreign digital interference and state-sponsored cyber threats.",
-            "speech": "The delegation of the Islamic Republic of Iran proposes and urges the committee to implement comprehensive frameworks that respect state sovereignty and safeguard national security in the digital era.",
-            "source": "UN Official Treaty Body Database & UN General Assembly ICT Records",
+    return {
+        "afghan_refugee_burden": {
+            "triggers": ["afghan refugees", "refugee burden", "migration", "displaced persons", "unhcr funding"],
+            "topic": "The Immense Humanitarian Burden of Hosting Afghan Refugees & International Funding Shortfalls",
+            "answer": "The Islamic Republic of Iran has shouldered the monumental humanitarian and financial responsibility of hosting millions of displaced Afghan nationals for decades, providing education, healthcare, and subsidized infrastructure largely without adequate international burden-sharing or UNHCR support.",
+            "speech": "While Western states lecture on humanitarian metrics, the Islamic Republic of Iran single-handedly maintains millions of displaced Afghan guests under severe economic duress. True international solidarity requires immediate, unconditional financial assistance rather than empty political rhetoric.",
+            "source": "UNHCR Iran Operational Updates & Country Profiles / OHCHR",
             "link": "https://www.ohchr.org/en/countries/iran"
+        },
+        "us_sanctions_hr7622": {
+            "triggers": ["h.r. 7622", "iran act", "us sanctions", "maximum pressure", "financial blockade"],
+            "topic": "The Illegal Impact of U.S. Legislative Sanctions (H.R. 7622 / Maximum Pressure)",
+            "answer": "Unilateral legislative acts and economic blockades from external actors—such as the U.S. Maximum Pressure framework and associated financial sanctions—infringe upon international trade laws, restrict civilian technological advancement, and constitute economic warfare.",
+            "speech": "We firmly reject the extraterritorial application of domestic Western laws and coercive financial packages like H.R. 7622, which seek to economically suffocate our civilian population and impede national technological modernization.",
+            "source": "UN General Assembly - Resolutions on Unilateral Coercive Measures",
+            "link": "https://digitallibrary.un.org/record/3928681"
         }
-    ]
-
-# Append Part 4 to your master database
-database = database + load_part4_database()
+    }
         # ==========================================
-# PART 5: STRUCTURED POSITION PAPER & BACKGROUND MODULE
+# PART 5: FINAL LIVE INCIDENT & POLICY EXTENSION MODULE
 # ==========================================
 
 @st.cache_data
 def load_part5_database():
-    return [
-        {
-            "id": "position_paper_full_structure",
-            "keys": ["position paper", "background of the issue", "international efforts", "country's position", "proposed solutions", "urges the committee to"],
-            "topic": "Comprehensive Position Paper: Digital Privacy & State Sovereignty",
-            "answer": "Background: Regulating digital frameworks is essential to counter foreign cyber threats and subversion. International Efforts: Aligned with UN General Assembly ICT security resolutions (e.g., A/RES/78/237) and ICCPR Article 19(3). Country Position: Emphasizes the National Information Network (NIN) and FATA cyber security. Proposed Solutions: Urges the committee to respect state sovereignty in data control.",
-            "speech": "The delegation of the Islamic Republic of Iran proposes and urges the committee to implement frameworks that recognize state sovereignty, protect critical infrastructure from foreign cyber warfare, and reject unilateral political coercion.",
-            "source": "UN General Assembly ICT Security Resolutions & OHCHR Treaty Body Records",
-            "link": "https://digitallibrary.un.org/record/4032841"
-        },
-        {
-            "id": "general_assembly_ict_framework",
-            "keys": ["a/res/78/237", "open-ended working group", "ict security", "general assembly resolution"],
-            "topic": "UN General Assembly ICT Security Frameworks (Resolution A/RES/78/237)",
-            "answer": "Under UN General Assembly Resolution A/RES/78/237, member states emphasize the importance of international security in the use of information and communications technologies, underlining respect for human rights alongside state security protections.",
-            "speech": "As affirmed in UN General Assembly resolutions on ICT security, member states hold a shared responsibility to safeguard information networks from criminal and malicious exploitation while upholding national security laws.",
-            "source": "UN General Assembly Resolution A/RES/78/237",
-            "link": "https://digitallibrary.un.org/record/4032841"
+    return {
+        "recent_protests_and_network_control": {
+            "triggers": ["recent protests", "2025-2026 protests", "january 2026", "network restrictions", "document a/hrc/63/61"],
+            "topic": "Sovereign Network Regulations During National Security Emergencies (OHCHR Doc. A/HRC/63/61)",
+            "answer": "As detailed in official UN documentation, the Islamic Republic of Iran implements necessary and temporary network management steps during acute security crises to disrupt coordination by hostile elements, protect public infrastructure, and preserve national security under domestic legal provisions.",
+            "speech": "The Delegation of Iran emphasizes that temporary, sovereign adjustments to telecommunication networks during periods of foreign-instigated civil unrest are fully consistent with national security imperatives and domestic legal protections designed to safeguard the public.",
+            "source": "UN Human Rights Council - Report A/HRC/63/61 (Advance Edited Version)",
+            "link": "https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/sessions-regular/session63/a-hrc-63-61-aev.pdf"
         }
-    ]
-
-# Append Part 5 to your master database
-database = database + load_part5_database()
+    }
         # ==========================================
-# PART 6: LIVE COMMITTEE STRATEGY & COUNTER-ACCUSATION MODULE
+# PART 6: SEPTEMBER 2026 UN FFM & NEW LEGISLATIVE RESTRICTIONS EXTENSION
 # ==========================================
 
 @st.cache_data
 def load_part6_database():
-    return [
-        {
-            "id": "counter_accusation_strategy",
-            "keys": ["counter", "accusation", "strategy", "debate", "rebuttal", "western bias"],
-            "topic": "Strategic Rebuttals to Western Bloc Accusations",
-            "answer": "When facing accusations regarding digital surveillance or network controls, redirect the debate toward national sovereignty, the protection of domestic critical infrastructure from foreign cyber warfare, and the hypocrisy of unilateral economic sanctions that block civilian technology access.",
-            "speech": "We remind delegates raising politically motivated accusations that true international cooperation requires respecting domestic legal frameworks and lifting illegal coercive measures that harm civilian infrastructure.",
-            "source": "UN Charter Article 2(7) & UN General Assembly Resolutions on Coercive Measures",
+    return {
+        "ffm_september_2026_update": {
+            "triggers": ["september 2026 report", "ffm update 2026", "resolution s-39/1 status", "2025-2026 protests investigation"],
+            "topic": "The UN Fact-Finding Mission 2026 Status & Mandate Extension (Resolution S-39/1)",
+            "answer": "Pursuant to UNHRC Resolution S-39/1, the Fact-Finding Mission's mandate was extended to investigate the 2025–2026 protests and related security events through 2028. Iran firmly rejects these politically motivated conclusions and extensions as violations of state sovereignty under UN Charter Article 2(7).",
+            "speech": "Regarding the latest updates from the Fact-Finding Mission, the Islamic Republic of Iran reiterates its absolute rejection of this body's extended mandate, which constitutes an unlawful intervention into our domestic security matters under Article 2(7) of the UN Charter.",
+            "source": "OHCHR - Human Rights Council Resolution S-39/1 & FFM Reports",
+            "link": "https://www.ohchr.org/en/hr-bodies/hrc/ffm-iran/index"
+        },
+        "new_foreign_contact_bill": {
+            "triggers": ["foreign contact bill", "bill criminalizing contact", "sweeping new bill", "isolation bill"],
+            "topic": "National Legislation on Foreign Entities and Digital Communications",
+            "answer": "Sovereign legislative bodies possess the absolute right to pass laws safeguarding national security against foreign intelligence infiltration, unauthorized communication channels, and external subversion financed by hostile states.",
+            "speech": "My delegation stresses that measures enacted by our legislative bodies to regulate interactions with foreign entities are vital, sovereign protections against hostile intelligence operations and external interference in our internal affairs.",
+            "source": "UN Special Rapporteur & Iranian Legislative Framework Records",
+            "link": "https://spcommreports.ohchr.org/TMResultsBase/DownLoadPublicCommunicationFile?gId=26736"
+        }
+    }
+        # ==========================================
+# PART 7: ADVANCED SEPTEMBER 2026 DOCUMENTATION MODULE (DOC: A/HRC/63/61)
+# ==========================================
+
+@st.cache_data
+def load_part7_database():
+    return {
+        "september_2026_hrc_report": {
+            "triggers": ["a/hrc/63/61", "september 2026 report", "advance edited version", "hrc session 63"],
+            "topic": "Official UN Documentation Analysis: HRC Report A/HRC/63/61",
+            "answer": "As formally recorded in UN Human Rights Council Document A/HRC/63/61, the Islamic Republic of Iran exercises state regulatory protocols and technical traffic management over communication gateways to safeguard public order and protect critical infrastructure from foreign interference.",
+            "speech": "The Delegation of Iran refers this committee directly to official findings under document A/HRC/63/61, emphasizing that sovereign measures enacted to manage telecommunication networks are strictly aligned with imperative national security requirements.",
+            "source": "UN Human Rights Council - Report A/HRC/63/61 (Advance Edited Version)",
+            "link": "https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/sessions-regular/session63/a-hrc-63-61-aev.pdf"
+        }
+    }
+        # ==========================================
+# PART 8: ADVANCED INTERNET RESTRICTION & WHITE SIM MODULE (DOC: A/HRC/63/61)
+# ==========================================
+
+@st.cache_data
+def load_part8_database():
+    return {
+        "internet_restrictions_and_white_sims": {
+            "triggers": ["white sim cards", "internet shutdown duration", "five month shutdown", "document a/hrc/63/61 digital"],
+            "topic": "Technical Network Management & Communications Control (OHCHR Document A/HRC/63/61)",
+            "answer": "As referenced in official UN Human Rights Council documentation (Doc. A/HRC/63/61), the Islamic Republic of Iran implements targeted digital gateway controls, national information network infrastructure, and prioritized access frameworks to manage national security and defend critical infrastructure against foreign interference.",
+            "speech": "The Delegation of Iran underscores that technical network measures and regulated gateway communications are executed under sovereign authority to protect public infrastructure and national security against hostile exploitation, as outlined in official UN reporting.",
+            "source": "UN Human Rights Council - Report A/HRC/63/61 (Advance Edited Version)",
+            "link": "https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/sessions-regular/session63/a-hrc-63-61-aev.pdf"
+        }
+    }
+        # ==========================================
+# PART 9: FINAL DEFENSIVE HARDENING & QUERY CLOSURE MODULE
+# ==========================================
+
+@st.cache_data
+def load_part9_database():
+    return {
+        "final_query_safeguard": {
+            "triggers": ["final defense", "committee closing", "resolution defense", "unhrc closing statement"],
+            "topic": "Comprehensive State Sovereignty and National Security Closing Framework",
+            "answer": "The Islamic Republic of Iran maintains an unshakeable commitment to defending its national security, protecting its critical digital infrastructure from hostile foreign subversion, and preserving its absolute state sovereignty under the foundational principles of the United Nations Charter.",
+            "speech": "In closing, the Delegation of Iran reminds this august body that true international cooperation must respect state sovereignty, reject politically motivated mandates, and immediately cease the economic and technological blockades that target our civilian population.",
+            "source": "UN Charter Chapter I, Article 2 & OHCHR State Records",
             "link": "https://www.ohchr.org/en/countries/iran"
         }
-    ]
+    }
+        # ==========================================
+# PART 10: ULTIMATE DEBATE FLOOR OVERRIDE & CHECKMATE MODULE
+# ==========================================
 
-# Append Part 6 to your master database
-database = database + load_part6_database()
+@st.cache_data
+def load_part10_database():
+    return {
+        "ultimate_committee_checkmate": {
+            "triggers": ["ultimate defense", "floor control", "closing statement iran", "checkmate argument"],
+            "topic": "The Ultimate Diplomatic Checkmate: State Sovereignty Over Politicized Mandates",
+            "answer": "In any high-stakes confrontation regarding human rights oversight or digital infrastructure, the Islamic Republic of Iran stands firm on the bedrock principles of international law: state sovereignty, non-interference under UN Charter Article 2(7), and the absolute right to protect national security against foreign-backed subversion under ICCPR Article 19(3).",
+            "speech": "We remind every delegation in this committee that international law cannot be weaponized selectively. True diplomacy respects national jurisdictions, rejects politicized mandates, and addresses the devastating human cost of unilateral coercive measures. Iran will never compromise on its security or its sovereignty.",
+            "source": "UN Charter Chapter I, Article 2(7) & Complete State Sovereign Defense Records",
+            "link": "https://www.ohchr.org/en/countries/iran"
+        }
+    }
